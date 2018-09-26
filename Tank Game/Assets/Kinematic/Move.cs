@@ -2,22 +2,24 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Move : MonoBehaviour {
-
-	public GameObject target;
+public class Move : MonoBehaviour
+{
+    #region PUBLIC_VARIABLES
+    public GameObject target;
 	public GameObject aim;
 	public Slider arrow;
-	public float max_mov_velocity = 5.0f;
 
-	public Vector3 mov_velocity = Vector3.zero;
+    public Vector3 mov_velocity = Vector3.zero;
+    public float max_mov_velocity = 5.0f;
+    #endregion
 
-	// Use this for initialization
-	public void SetMovementVelocity (Vector3 vel) {
+    public void SetMovementVelocity(Vector3 vel)
+    {
 		mov_velocity = vel;
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
         // TODO 1: Make sure mov_velocity is never bigger that max_mov_velocity
         if (mov_velocity.magnitude > max_mov_velocity)

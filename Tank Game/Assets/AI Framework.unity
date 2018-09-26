@@ -2427,8 +2427,6 @@ GameObject:
   - component: {fileID: 1268264600}
   - component: {fileID: 1268264603}
   - component: {fileID: 1268264601}
-  - component: {fileID: 1268264598}
-  - component: {fileID: 1268264597}
   - component: {fileID: 1268264595}
   m_Layer: 9
   m_Name: Agent 01
@@ -2451,39 +2449,17 @@ MonoBehaviour:
   target: {fileID: 1258218286}
   aim: {fileID: 1248009676}
   arrow: {fileID: 569448187}
-  max_mov_velocity: 5
   mov_velocity: {x: 0, y: 0, z: 0}
+  max_mov_velocity: 5
 --- !u!114 &1268264596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268264594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e4f729fb7ecb4f4cb534791f38b264e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1268264597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1268264594}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e439e859d063a4ca9983e1f7bb60411a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1268264598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1268264594}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1268264599
@@ -2549,6 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_angle: 0.5
+  secondsChangeDirection: 1
 --- !u!1 &1306440706
 GameObject:
   m_ObjectHideFlags: 0

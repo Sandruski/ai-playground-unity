@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KinematicFlee : MonoBehaviour {
-
+public class KinematicFlee : MonoBehaviour
+{
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+    {
 		move = GetComponent<Move>();
 	}
 	

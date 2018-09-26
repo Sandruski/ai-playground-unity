@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KinematicFaceMovement : MonoBehaviour {
-
-	Move move;
+public class KinematicFaceMovement : MonoBehaviour
+{
+    Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+    {
 		move = GetComponent<Move>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update()
+    {
         // TODO 7: rotate the whole tank to look in the movement direction
         // Extremnely similar to TODO 2
         float angle = Mathf.Atan2(move.mov_velocity.normalized.x, move.mov_velocity.normalized.z);
