@@ -28,7 +28,6 @@ public class KinematicWander : MonoBehaviour
 		return Random.value * Random.value;
 	}
 	
-	// Update is called once per frame
 	void Update() 
 	{
         // TODO 9: Generate a velocity vector in a random rotation (use RandomBinominal) and some attenuation factor
@@ -36,7 +35,7 @@ public class KinematicWander : MonoBehaviour
 
         if (timer >= secondsChangeDirection)
         {
-            float angle = RandomBinominal() * max_angle;
+            float angle = RandomBinominal() * max_angle;       
 
             randomVelocity = new Vector3(-Mathf.Sin(angle), 0.0f, Mathf.Cos(angle));
             randomVelocity.Normalize();
