@@ -1,26 +1,27 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class SteeringPursue : MonoBehaviour
+public class SteeringEvade : MonoBehaviour
 {
     public float max_prediction = 1.0f;
 
-	Move move;
-	SteeringArrive arrive;
+    Move move;
+    SteeringFlee flee;
 
-	void Start()
+    void Start()
     {
-		move = GetComponent<Move>();
-		arrive = GetComponent<SteeringArrive>();
-	}
-	
-	void Update() 
-	{
-		Steer(move.target.transform.position, move.target.GetComponent<Move>().movement);
-	}
+        move = GetComponent<Move>();
+        flee = GetComponent<SteeringFlee>();
+    }
 
-	public void Steer(Vector3 target, Vector3 velocity)
-	{
+    void Update()
+    {
+        Steer(move.target.transform.position, move.target.GetComponent<Move>().movement);
+    }
+
+    public void Steer(Vector3 target, Vector3 velocity)
+    {
         // TODO 6: Create a fake position to represent
         // enemies predicted movement. Then call Steer()
         // on our Steering Arrive
@@ -35,6 +36,6 @@ public class SteeringPursue : MonoBehaviour
         float prediction = distanceToTarget / max_prediction;
         predictedPosition = target + velocity * prediction;
 
-        arrive.Steer(predictedPosition);
-	}
+        flee.Steer(predictedPosition);
+    }
 }

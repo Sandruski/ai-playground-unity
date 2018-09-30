@@ -7,10 +7,10 @@ public class BehaviorsManager : MonoBehaviour
     public enum KinematicBehavior { seek, flee, wander };
     public KinematicBehavior currBehavior = KinematicBehavior.seek;
 
-    KinematicSeek seek;
-    KinematicFlee flee;
-    KinematicArrive arrive;
-    KinematicWander wander;
+    private KinematicSeek seek;
+    private KinematicFlee flee;
+    private KinematicArrive arrive;
+    private KinematicWander wander;
 
 	void Awake()
     {

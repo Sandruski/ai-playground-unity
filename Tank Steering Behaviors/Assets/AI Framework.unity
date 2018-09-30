@@ -1014,7 +1014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000000007450581, y: 6}
+  m_AnchoredPosition: {x: 0, y: 6}
   m_SizeDelta: {x: -2, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &619787481
@@ -2684,6 +2684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_angle: 0.5
+  wanderRate: 0.1
 --- !u!114 &1260608283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,7 +2895,10 @@ GameObject:
   - component: {fileID: 1268264606}
   - component: {fileID: 1268264607}
   - component: {fileID: 1268264608}
+  - component: {fileID: 1268264597}
+  - component: {fileID: 1268264609}
   - component: {fileID: 1268264595}
+  - component: {fileID: 1268264610}
   m_Layer: 9
   m_Name: Agent 01
   m_TagString: Untagged
@@ -2933,6 +2937,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4f729fb7ecb4f4cb534791f38b264e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1268264597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268264594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714a02a1f6358d847b03c48e8a75a9ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_prediction: 2
 --- !u!114 &1268264598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,7 +3006,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268264594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.08, y: 0, z: -16.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1970921937}
@@ -3011,6 +3027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_angle: 0.5
+  wanderRate: 0.1
 --- !u!114 &1268264604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3053,7 +3070,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1268264594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bacba9e12dcf945949586a2aa108bfdb, type: 3}
   m_Name: 
@@ -3071,6 +3088,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_prediction: 2
+--- !u!114 &1268264609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268264594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e439e859d063a4ca9983e1f7bb60411a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min_distance: 0.1
+  time_to_target: 0.25
+  distanceToCircle: 10
+  circleRadius: 8
+  wanderRate: 0.1
+--- !u!114 &1268264610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268264594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38eb0f4422c22f84f99f72838299b64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currBehavior: 0
 --- !u!1 &1306440706
 GameObject:
   m_ObjectHideFlags: 0

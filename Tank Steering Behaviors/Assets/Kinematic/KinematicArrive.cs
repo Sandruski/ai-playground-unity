@@ -1,29 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KinematicArrive : MonoBehaviour {
-
+public class KinematicArrive : MonoBehaviour
+{
 	public float min_distance = 0.1f;
 	public float time_to_target = 0.25f;
 
 	Move move;
 
-	// Use this for initialization
-	void Start () {
+	void Start()
+    {
 		move = GetComponent<Move>();
 	}
 
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
+        /// *Modified from original
 		Vector3 diff = move.target.transform.position - transform.position;
 
-		if(diff.magnitude < min_distance)
-			move.SetMovementVelocity(Vector3.zero);
-
-		diff /= time_to_target;
-
-		move.SetMovementVelocity(diff);
+        if (diff.magnitude < min_distance)
+            move.SetMovementVelocity(Vector3.zero);
+        else
+        {
+            diff /= time_to_target;
+            move.SetMovementVelocity(diff);
+        }
 	}
 
 	void OnDrawGizmosSelected() 

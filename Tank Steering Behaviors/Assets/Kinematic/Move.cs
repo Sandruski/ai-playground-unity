@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Move : MonoBehaviour {
-
+public class Move : MonoBehaviour
+{
 	public GameObject target;
 	public GameObject aim;
 	public Slider arrow;
@@ -17,29 +17,27 @@ public class Move : MonoBehaviour {
 	public float rotation = 0.0f; // degrees
 
 	// Methods for behaviours to set / add velocities
-	public void SetMovementVelocity (Vector3 velocity) 
+	public void SetMovementVelocity(Vector3 velocity) 
 	{
 		movement = velocity;
 	}
 
-	public void AccelerateMovement (Vector3 velocity) 
+	public void AccelerateMovement(Vector3 velocity) 
 	{
 		movement += velocity;
 	}
 
-	public void SetRotationVelocity (float rotation_velocity) 
+	public void SetRotationVelocity(float rotation_velocity) 
 	{
 		rotation = rotation_velocity;
 	}
 
-	public void AccelerateRotation (float rotation_acceleration) 
+	public void AccelerateRotation(float rotation_acceleration) 
 	{
 		rotation += rotation_acceleration;
 	}
-
 	
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
 		// cap velocity
 		if(movement.magnitude > max_mov_velocity)

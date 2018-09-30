@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KinematicFlee : MonoBehaviour {
-
+public class KinematicFlee : MonoBehaviour
+{
 	Move move;
 
-	// Use this for initialization
-	void Start () {
+	void Start()
+    {
 		move = GetComponent<Move>();
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
 		Vector3 diff = move.transform.position - move.target.transform.position;
 		diff.Normalize ();

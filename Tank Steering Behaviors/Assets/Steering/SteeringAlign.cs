@@ -30,7 +30,7 @@ public class SteeringAlign : MonoBehaviour
 
         if (Mathf.Abs(deltaAngle) < slow_angle)
         {
-            float idealAngle = deltaAngle * time_to_target;
+            float idealAngle = deltaAngle / time_to_target;
             angularRotation = idealAngle;
 
             if (Mathf.Abs(deltaAngle) < min_angle)

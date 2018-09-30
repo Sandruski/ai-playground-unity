@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KinematicSeek : MonoBehaviour {
-
+public class KinematicSeek : MonoBehaviour
+{
 	Move move;
 
-	// Use this for initialization
-	void Start () {
+	void Start()
+    {
 		move = GetComponent<Move>();
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
 		Vector3 diff = move.target.transform.position - transform.position;
 		diff.Normalize ();
