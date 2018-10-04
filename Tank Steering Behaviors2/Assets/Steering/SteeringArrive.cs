@@ -19,7 +19,7 @@ public class SteeringArrive : MonoBehaviour {
 	{
 		Steer(move.target.transform.position);
 	}
-
+    /*
 	public void Steer(Vector3 target)
 	{
 		if(!move)
@@ -54,9 +54,9 @@ public class SteeringArrive : MonoBehaviour {
 
 		move.AccelerateMovement(acceleration);
 	}
-    
+    */
+
     /// My own implementation of Steer
-    /*
     public void Steer(Vector3 target)
     {
         if (!move)
@@ -77,7 +77,7 @@ public class SteeringArrive : MonoBehaviour {
 
         if (distanceToTarget < slow_distance)
         {
-            Vector3 idealVel = currVel.normalized * distanceToTarget / time_to_target;
+            Vector3 idealVel = currVel.normalized * distanceToTarget * time_to_target;
 
             if (distanceToTarget < min_distance)
                 idealVel = Vector3.zero;
@@ -87,7 +87,6 @@ public class SteeringArrive : MonoBehaviour {
 
         move.AccelerateMovement(newAcceleration);
     }
-    */
 
     void OnDrawGizmosSelected() 
 	{
