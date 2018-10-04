@@ -54,8 +54,42 @@ public class SteeringArrive : MonoBehaviour {
 
 		move.AccelerateMovement(acceleration);
 	}
+    
+    /// My own implementation of Steer
+    /*
+    public void Steer(Vector3 target)
+    {
+        if (!move)
+            move = GetComponent<Move>();
 
-	void OnDrawGizmosSelected() 
+        // TODO 3: Create a vector to calculate our ideal velocity
+        // then calculate the acceleration needed to match that velocity
+        // before sending it to move.AccelerateMovement() clamp it to 
+        // move.max_mov_acceleration
+
+        Vector3 currVel = target - transform.position;
+        float distanceToTarget = currVel.magnitude;
+
+        currVel.Normalize();
+        currVel *= move.max_mov_acceleration;
+
+        Vector3 newAcceleration = currVel;
+
+        if (distanceToTarget < slow_distance)
+        {
+            Vector3 idealVel = currVel.normalized * distanceToTarget / time_to_target;
+
+            if (distanceToTarget < min_distance)
+                idealVel = Vector3.zero;
+
+            newAcceleration = idealVel - move.movement;
+        }
+
+        move.AccelerateMovement(newAcceleration);
+    }
+    */
+
+    void OnDrawGizmosSelected() 
 	{
 		// Display the explosion radius when selected
 		Gizmos.color = Color.white;

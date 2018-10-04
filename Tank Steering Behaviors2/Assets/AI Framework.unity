@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 213304462}
   - component: {fileID: 213304461}
   - component: {fileID: 213304460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 252131590}
   - component: {fileID: 252131592}
   - component: {fileID: 252131591}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankChassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 663359550}
   - component: {fileID: 663359552}
   - component: {fileID: 663359551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTracksLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705626896}
   - component: {fileID: 705626895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   - component: {fileID: 960830320}
   - component: {fileID: 960830322}
   - component: {fileID: 960830321}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,9 +2463,13 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 412004, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.37
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 412004, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2505,11 +2509,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11499750, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11428332, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Enabled
@@ -2517,7 +2521,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11444714, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11428332, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: radius
@@ -2529,7 +2533,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11416896, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198852, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: m_Layer
@@ -2602,6 +2606,86 @@ Prefab:
     - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
       propertyPath: mask.m_Bits
       value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490270, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[0].direction.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[0].length
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[1].length
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[2].length
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[1].direction.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[1].direction.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[2].direction.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454982, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: rays.Array.data[2].direction.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499750, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: search_radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473662, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198830, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 191176, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 153908, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 106346, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 185350, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 147550, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 165566, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 189626, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 144462, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11427684, guid: 77aab66f3904942bab33067e31d9d228, type: 2}
@@ -3294,7 +3378,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579789855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b13ae3cbc54e44631ae987b5486c59f4, type: 3}
   m_Name: 
@@ -3330,7 +3414,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579789855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed0f59a6c04e14ef2af5fe4bfa2aa885, type: 3}
   m_Name: 
@@ -3390,7 +3474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579789855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 0, z: 3.06}
+  m_LocalPosition: {x: -6.39, y: 0, z: 3.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1870413948}
@@ -3429,7 +3513,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579789855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 782558cc3a6d845a990f61f72475c82d, type: 3}
   m_Name: 
@@ -3437,7 +3521,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 512
-  search_radius: 10
+  search_radius: 5
   falloff:
     serializedVersion: 2
     m_Curve:
@@ -3468,7 +3552,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579789855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80e3618e1707546a19fff3fb11d7c9eb, type: 3}
   m_Name: 
@@ -3477,6 +3561,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   avoid_distance: 5
+  rays:
+  - direction: {x: 0, y: 0, z: 1}
+    length: 5
+  - direction: {x: 1, y: 0, z: 1}
+    length: 2.5
+  - direction: {x: -1, y: 0, z: 1}
+    length: 2.5
 --- !u!1 &1621344713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,7 +3652,7 @@ GameObject:
   - component: {fileID: 1681955694}
   - component: {fileID: 1681955696}
   - component: {fileID: 1681955695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3634,7 +3725,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1690438179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4119,7 +4210,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1870413948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankRenderers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4374,7 +4465,7 @@ GameObject:
   - component: {fileID: 1968143082}
   - component: {fileID: 1968143084}
   - component: {fileID: 1968143083}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankTracksRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
