@@ -14,7 +14,7 @@ public class SteeringFollowPath : MonoBehaviour
     Vector3 closestPoint;
     float accumulatedDistanceRatio = 0.0f;
 
-    float minDistance = 0.05f;
+    float minDistance = 3.0f;
     float distanceRatio = 0.05f;
     #endregion
 
@@ -48,8 +48,8 @@ public class SteeringFollowPath : MonoBehaviour
 
             closestPoint = path.CalcPositionByDistanceRatio(accumulatedDistanceRatio);
         }
-        else
-            seek.Steer(closestPoint);
+
+        seek.Steer(closestPoint);
 	}
 
 	void OnDrawGizmosSelected() 

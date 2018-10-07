@@ -28,6 +28,7 @@ public class SteeringSeparation : MonoBehaviour {
                 continue;
 
             Vector3 diff = transform.position - go.transform.position;
+            diff.y = 0.0f;
             float distance = diff.magnitude;
             float acceleration = (1.0f - falloff.Evaluate(distance / search_radius)) * move.max_mov_acceleration;
 
