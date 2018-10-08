@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringWander : MonoBehaviour {
-
+public class SteeringWander : SteeringAbstract
+{
 	public Vector3 offset = Vector3.zero;
 	public float radius = 1.0f;
 	public float min_update = 0.5f;

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringSeek : MonoBehaviour {
-
+public class SteeringSeek : SteeringAbstract
+{
 	Move move;
 
 	// Use this for initialization
@@ -25,6 +25,6 @@ public class SteeringSeek : MonoBehaviour {
 		diff.Normalize ();
 		diff *= move.max_mov_acceleration;
 
-		move.AccelerateMovement(diff);
+		move.AccelerateMovement(diff, priority);
 	}
 }

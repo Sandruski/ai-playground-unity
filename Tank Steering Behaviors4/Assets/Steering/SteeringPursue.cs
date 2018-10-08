@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringPursue : MonoBehaviour {
-
+public class SteeringPursue : SteeringAbstract
+{
 	public float max_prediction;
 
 	Move move;
