@@ -34,6 +34,8 @@ public class SteeringSeparation : MonoBehaviour
             escapeVectorsSum += escapeVector;
         }
 
+        escapeVectorsSum.y = 0;
+
         if (colliders.Length > 1)
             escapeVectorsSum /= colliders.Length;
 

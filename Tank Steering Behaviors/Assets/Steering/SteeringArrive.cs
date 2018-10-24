@@ -39,13 +39,15 @@ public class SteeringArrive : MonoBehaviour
 
         if (distanceToTarget < slow_distance)
         {
-            Vector3 idealVel = currVel.normalized * distanceToTarget / time_to_target;
+            Vector3 idealVel = currVel.normalized * distanceToTarget * time_to_target;
 
             if (distanceToTarget < min_distance)
                 idealVel = Vector3.zero;
 
             newAcceleration = idealVel - move.movement;
         }
+
+        newAcceleration.y = 0;
 
         move.AccelerateMovement(newAcceleration);
     }
