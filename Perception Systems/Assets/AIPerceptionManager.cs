@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PerceptionEvent
 {
@@ -11,11 +12,10 @@ public class PerceptionEvent
 	public types type;
 }
 
-public class AIPerceptionManager : MonoBehaviour {
-
+public class AIPerceptionManager : MonoBehaviour
+{
 	public GameObject Alert;
 
-	// Update is called once per frame
 	void PerceptionEvent (PerceptionEvent ev) {
 
 		if(ev.type == global::PerceptionEvent.types.NEW)

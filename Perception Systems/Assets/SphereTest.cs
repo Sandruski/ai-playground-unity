@@ -10,17 +10,17 @@ public class SphereTest : MonoBehaviour
     private float distance = 1.0f;
     private Camera camera;
 
-	void Start()
+    private List<GameObject> detectedEnemies = new List<GameObject>();
+
+    void Start()
     {
         camera = GetComponent<Camera>();
         distance = camera.nearClipPlane + camera.farClipPlane;
-
-        List<GameObject> enemies = new List<GameObject>();
     }
 
     void Update()
     {
-
+        List<GameObject> newDetectedEnemies = new List<GameObject>();
 
         // 1
         Collider[] colliders = Physics.OverlapSphere(transform.position, distance, mask);
@@ -41,10 +41,38 @@ public class SphereTest : MonoBehaviour
                     Debug.DrawRay(ray.origin, col.transform.position - transform.position);
 
                     if (hitInfo.collider.gameObject.CompareTag("Visual Emitter"))
-                    {
-                        Debug.Log("Player!!!");
-                    }
+                        newDetectedEnemies.Add(hitInfo.collider.gameObject);
                 }
+            }
+        }
+
+        for (int i = detectedEnemies.Count - 1; i >= 0; --i)
+        {
+            if (!newDetectedEnemies.Contains(detectedEnemies[i]))
+            {
+                PerceptionEvent perceptionEvent = new PerceptionEvent();
+                perceptionEvent.type = PerceptionEvent.types.LOST;
+                perceptionEvent.sense = PerceptionEvent.senses.VISION;
+                perceptionEvent.go = detectedEnemies[i];
+                gameObject.SendMessage("PerceptionEvent", perceptionEvent);
+
+                // Lost enemy
+                detectedEnemies.RemoveAt(i);
+            }
+        }
+
+        foreach (GameObject newDetectedEnemy in newDetectedEnemies)
+        {
+            if (!detectedEnemies.Contains(newDetectedEnemy))
+            {
+                PerceptionEvent perceptionEvent = new PerceptionEvent();
+                perceptionEvent.type = PerceptionEvent.types.NEW;
+                perceptionEvent.sense = PerceptionEvent.senses.VISION;
+                perceptionEvent.go = newDetectedEnemy;
+                gameObject.SendMessage("PerceptionEvent", perceptionEvent);
+
+                // New enemy
+                detectedEnemies.Add(newDetectedEnemy);
             }
         }
     }
